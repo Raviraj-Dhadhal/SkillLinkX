@@ -1,0 +1,591 @@
+/* ==========================================================================
+   SkillLinkX - Public Pages CSS (public-pages.css)
+   Clean, modern, lightweight styles for public-facing views & ASP.NET forms
+   ========================================================================== */
+
+/* Main Container */
+.pub-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 32px 40px 60px 40px;
+}
+
+/* --------------------------------------------------------------------------
+   Box-Type Authentication & Contact Forms (Login / Register / Contact)
+   -------------------------------------------------------------------------- */
+.auth-wrapper {
+    min-height: calc(80vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 440px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.auth-box-lg {
+    max-width: 640px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.auth-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.auth-header p {
+    font-size: 14px;
+    color: #64748B;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1E293B;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    border-color: #0052CC;
+    box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.12);
+    outline: none;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ASP.NET Validation Message Styling */
+.val-error {
+    display: block;
+    color: #DC2626;
+    font-size: 12.5px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.val-summary {
+    background-color: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    color: #991B1B;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.val-summary ul {
+    margin-left: 18px;
+    margin-top: 6px;
+}
+
+/* Form Submit Button */
+.btn-primary-block {
+    width: 100%;
+    background-color: #0052CC;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+.btn-primary-block:hover {
+    background-color: #003D9B;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13.5px;
+    color: #64748B;
+}
+
+.auth-footer a {
+    color: #0052CC;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* 3-Tab Role Selector (Matching Image) */
+.role-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.role-tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 14px;
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.role-tab-btn.active {
+    background-color: #E0EAFF;
+    border-color: #0052CC;
+    color: #003D9B;
+}
+
+/* Phone Input with +91 Box */
+.input-addon-group {
+    display: flex;
+}
+
+.input-addon {
+    background-color: #EEF2F6;
+    border: 1px solid #CBD5E1;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    padding: 11px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    display: flex;
+    align-items: center;
+}
+
+.input-addon-group .form-control {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Password Input with Eye Toggle Icon */
+.password-toggle-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle-group .form-control {
+    padding-right: 42px;
+}
+
+.toggle-password-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #64748B;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password-btn:hover {
+    color: #0052CC;
+}
+
+/* Skills Chip Box */
+.skills-container-box {
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    padding: 10px 12px;
+    min-height: 80px;
+    background-color: #FFFFFF;
+}
+
+.skills-chips-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.skill-chip {
+    background-color: #DCE7FD;
+    color: #0040A2;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.skill-chip i {
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.skills-input-field {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #1E293B;
+    padding: 4px 0;
+}
+
+/* Forgot Password Link */
+.forgot-pass-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.forgot-pass-link {
+    font-size: 12.5px;
+    color: #0052CC;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-pass-link:hover {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Home / Landing Page Sections
+   -------------------------------------------------------------------------- */
+.hero-banner {
+    text-align: center;
+    padding: 50px 20px 40px 20px;
+    background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    border-radius: 24px;
+    margin-bottom: 48px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background-color: #EBF3FF;
+    color: #0052CC;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.hero-banner h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0F172A;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.hero-banner h1 span {
+    color: #0052CC;
+}
+
+.hero-banner p {
+    font-size: 16px;
+    color: #475569;
+    max-width: 600px;
+    margin: 0 auto 28px auto;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.btn-hero-primary {
+    background-color: #0052CC;
+    color: #FFFFFF;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-hero-primary:hover {
+    background-color: #003D9B;
+}
+
+.btn-hero-secondary {
+    background-color: #F1F5F9;
+    color: #1E293B;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-hero-secondary:hover {
+    background-color: #E2E8F0;
+}
+
+/* Feature Cards Grid */
+.section-heading {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.section-heading h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    font-size: 15px;
+    color: #64748B;
+}
+
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.feature-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 28px 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #EBF3FF;
+    color: #0052CC;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0F172A;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Jobs, Internships & Companies Listing Cards
+   -------------------------------------------------------------------------- */
+.list-filter-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.search-input-box {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+}
+
+.search-input-box i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94A3B8;
+}
+
+.search-input-box input {
+    width: 100%;
+    padding: 11px 14px 11px 40px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.job-list-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.job-list-card:hover {
+    border-color: #0052CC;
+    box-shadow: 0 4px 14px rgba(0, 82, 204, 0.06);
+}
+
+.job-info-block h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.job-company-tag {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0052CC;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.job-meta-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.meta-badge {
+    background-color: #F1F5F9;
+    color: #475569;
+    font-size: 12.5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.badge-blue {
+    background-color: #EBF3FF;
+    color: #0052CC;
+}
+
+.badge-green {
+    background-color: #ECFDF5;
+    color: #059669;
+}
+
+/* --------------------------------------------------------------------------
+   About, Privacy & Terms Info Cards
+   -------------------------------------------------------------------------- */
+.info-content-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 36px 40px;
+    line-height: 1.7;
+    color: #334155;
+}
+
+.info-content-card h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 12px;
+}
+
+.info-content-card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0F172A;
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+.info-content-card p {
+    margin-bottom: 14px;
+    font-size: 14.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pub-container {
+        padding: 24px 20px 40px 20px;
+    }
+
+    .hero-banner h1 {
+        font-size: 28px;
+    }
+
+    .job-list-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .info-content-card {
+        padding: 24px 20px;
+    }
+}
