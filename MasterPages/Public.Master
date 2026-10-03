@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Public.master.cs" Inherits="SkillLinkX.MasterPages._public" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font-Awesome (Hamburger)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/assets/CSS/public-master.css") %>" />
+
+ <%-- in asp .net we use href/src="<%=ResolveUrl("~/Folder structure)%>" for all links tags --%>
+
+    <title>SkillLinkXs</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header -->
+        <header class="navbar">
+            <div class="navbar-container">
+
+                <!-- Left Side -->
+                <a href="#" class="header-logo">
+                    <img src='<%= ResolveUrl("~/assets/images/logo.svg") %>' alt="SkillLinkX Logo" class="logo" />
+                    <div class="text-stack">
+                        <span class="logo-text">SkillLinkX</span>
+                        <span class="logo-sub-text">PROFESSIONAL HUB</span>
+                    </div>                
+                </a>
+                
+                <!-- Hamburger -->
+                <button class="hamburger" id="hamburger" type="button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Wrapper Content -->
+                <nav class="nav-menu">
+                    <ul>
+                        <li class="nav-items"><a href="<%= ResolveUrl("~/Public/Home.aspx") %>" class="nav-links"> Home </a></li>
+                        <li class="nav-items"><a href="#" class="nav-links"> Jobs </a></li>
+                        <li class="nav-items"><a href="#" class="nav-links"> Internship </a></li>
+                        <li class="nav-items"><a href="#" class="nav-links"> Companies </a></li>
+                        <li class="nav-items"><a href="<%= ResolveUrl("~/Public/About.aspx") %>" class="nav-links"> About </a></li>
+                    </ul>
+                </nav>
+
+                <div class="auth-nav">
+                    <a href="#" class="log-in-btn"> Log in </a>
+                    <a href="#" class="register-btn"> Register </a> 
+                </div>
+
+            </div>
+
+
+        </header>
+
+            <!-- Main Content Page --> 
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+            
+            <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+
+                <div class="footer-main">
+
+                    <div class="footer-left-box">
+                        <a href="#" class="footer-logo">
+                            <img src='<%=ResolveUrl("~/assets/images/logo.svg")%>' alt="Logo image" class="logo"/>
+                            <div class="footer-text-stack">
+                                <span class="footer-logo-text">SkillLinkX</span>
+                                <span class="footer-logo-sub-text">PROFESSIONAL HUB</span>
+                            </div>
+                        </a>
+                        <p class="footer-small-txt"> Connecting talent with opportunity. </p>
+                        <p class="footer-description"> Discover opportunities, connect with people, and take the next step in your career. </p>
+                    </div>
+                    <div class="footer-explore">
+                        <span class="footer-title-text"> Explore </span>
+                        <ul>
+                            <li><a href="#" class="footer-links"> Discover Companies </a></li>
+                            <li><a href="#" class="footer-links"> Find Jobs </a></li>
+                            <li><a href="#" class="footer-links"> Explore Internship </a></li>
+                        </ul>
+                    </div>
+
+                        <!-- Connect Section -->
+                    <div class="footer-connect">
+                        <p class="footer-title-text"> Follow </p>
+                        <div class="social-links">
+
+                            <a href="#" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="#" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="#" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="#" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                    <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <span> © <%= DateTime.Now.Year %> SkillLinkX </span>
+                    <div class="footer-legal">
+                        <ul>
+                            <li><a href="#" class="footer-links">Privacy Policy</a></li>
+                            <li><a href="#" class="footer-links">Terms of Service</a></li>
+                            <li><a href="#" class="footer-links">Contact</a></li>
+                        </ul>
+                    </div>
+                    <span class="footer-made"> Built for the next generation. </span>
+                </div>
+
+            </div>
+        </footer>
+
+    </form>
+
+    <!-- js -->
+    <script src="<%= ResolveUrl("~/assets/JS/public-master.js") %>"></script>
+
+</body>
+</html>
