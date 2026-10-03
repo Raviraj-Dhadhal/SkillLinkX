@@ -10,3 +10,29 @@ if (hamburger) {
         authNav.classList.toggle("show"); // Show or hide login/register buttons on mobile
     });
 }
+
+// 3. Highlight current active navigation link
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname.toLowerCase();
+    const navLinks = document.querySelectorAll(".nav-menu .nav-links");
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (!href || href === "#") return;
+
+        try {
+            const linkPath = new URL(link.href, window.location.origin).pathname.toLowerCase();
+            if (
+                currentPath === linkPath ||
+                (linkPath.includes("home.aspx") && (currentPath === "/" || currentPath.endsWith("/home.aspx") || currentPath.endsWith("/public/home")))
+            ) {
+                link.classList.add("active");
+            }
+        } catch (e) {
+            // fallback
+            if (href && currentPath.includes(href.toLowerCase())) {
+                link.classList.add("active");
+            }
+        }
+    });
+});
