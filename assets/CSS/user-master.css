@@ -1,0 +1,375 @@
+/* ==========================================================================
+   SkillLinkX - Candidate Master Stylesheet (25% Sidebar / 75% Body)
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #F8F9FB;
+    color: #191B23;
+}
+
+/* 25% Sidebar / 75% Body Layout Grid */
+.user-layout-grid {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Left Sidebar (25%) */
+.user-sidebar {
+    background-color: #FFFFFF;
+    border-right: 1px solid #E7EAF0;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand {
+    padding: 0 8px 16px;
+}
+
+.sidebar-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.sidebar-logo-img {
+    width: 36px;
+    height: 36px;
+}
+
+.sidebar-text-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo-text {
+    color: #0040A2;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.sidebar-logo-sub {
+    color: #434654;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-action-box {
+    padding: 8px 0 16px;
+}
+
+.find-jobs-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #0052CC;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 16px;
+    border-radius: 8px;
+}
+
+.find-jobs-btn:hover {
+    background-color: #003D9B;
+}
+
+/* Nav links */
+.sidebar-nav {
+    flex-grow: 1;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #434654;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    padding: 9px 12px;
+    border-radius: 8px;
+}
+
+.sidebar-link i {
+    font-size: 16px;
+    width: 20px;
+    color: #64748B;
+}
+
+.sidebar-link:hover {
+    background-color: #F3F3FD;
+    color: #0052CC;
+}
+
+.sidebar-link:hover i {
+    color: #0052CC;
+}
+
+.sidebar-link.active {
+    background-color: #0052CC;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.sidebar-link.active i {
+    color: #FFFFFF;
+}
+
+.sidebar-footer {
+    border-top: 1px solid #E7EAF0;
+    padding-top: 14px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-footer-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748B;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.sidebar-footer-link:hover {
+    background-color: #F3F3FD;
+    color: #0052CC;
+}
+
+.sidebar-footer-link.logout:hover {
+    background-color: #FEE2E2;
+    color: #DC2626;
+}
+
+/* Right Body (75%) */
+.user-main-area {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Topbar */
+.user-topbar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E7EAF0;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.sidebar-toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #191B23;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.topbar-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #F8F9FB;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 8px 16px;
+    width: 380px;
+    max-width: 100%;
+}
+
+.topbar-search i {
+    color: #64748B;
+    font-size: 14px;
+}
+
+.topbar-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 13.5px;
+    width: 100%;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.topbar-icon-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #434654;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #F8F9FB;
+    border: 1px solid #E2E8F0;
+}
+
+.topbar-icon-btn:hover {
+    color: #0052CC;
+    border-color: #0052CC;
+}
+
+.topbar-user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 8px;
+    border-left: 1px solid #E7EAF0;
+}
+
+.user-avatar-chip {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background-color: #0052CC;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.user-info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #191B23;
+}
+
+.user-role {
+    font-size: 11px;
+    color: #64748B;
+}
+
+/* Content Area */
+.user-content-wrapper {
+    padding: 24px;
+    flex-grow: 1;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Mobile Dim Backdrop Overlay */
+.sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+}
+
+.sidebar-backdrop.show {
+    display: block;
+}
+
+/* Mobile Responsive Breakpoints */
+@media (max-width: 900px) {
+    .user-layout-grid {
+        grid-template-columns: 100%;
+    }
+
+    .sidebar-toggle-btn {
+        display: block;
+    }
+
+    /* 60% Width Drawer for Mobile Sidebar */
+    .user-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100vh;
+        z-index: 999;
+        overflow-y: auto;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+        transition: left 0.3s ease;
+    }
+
+    .user-sidebar.open {
+        left: 0;
+    }
+
+    .topbar-search {
+        width: auto;
+        flex-grow: 1;
+    }
+
+    .user-content-wrapper {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .user-topbar {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .topbar-actions {
+        gap: 8px;
+    }
+
+    .topbar-user-profile .user-info-text {
+        display: none;
+    }
+
+    .topbar-search {
+        display: none;
+    }
+}
