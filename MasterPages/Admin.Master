@@ -1,0 +1,122 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="SkillLinkX.Admin.Admin" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillLinkX - Admin Portal</title>
+
+    <!-- Font-Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/assets/CSS/admin-master.css") %>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("~/assets/CSS/admin-pages.css") %>" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Desktop Grid Layout -->
+        <div class="admin-layout-grid">
+            
+            <!-- Left Sidebar -->
+            <aside class="admin-sidebar">
+                <!-- Brand / Logo -->
+                <div class="sidebar-brand">
+                    <a href="<%= ResolveUrl("~/Admin/Dashboard.aspx") %>" class="sidebar-logo-link">
+                        <img src='<%= ResolveUrl("~/assets/images/logo.svg") %>' alt="SkillLinkX Logo" class="sidebar-logo-img" />
+                        <div>
+                            <span class="sidebar-logo-text">SkillLinkX</span>
+                            <span class="sidebar-logo-sub">ADMIN PORTAL</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="<%= ResolveUrl("~/Admin/Dashboard.aspx") %>" class="sidebar-link"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                        <li><a href="<%= ResolveUrl("~/Admin/Students.aspx") %>" class="sidebar-link"><i class="fa-solid fa-user-graduate"></i> Students</a></li>
+                        <li><a href="<%= ResolveUrl("~/Admin/Companies.aspx") %>" class="sidebar-link"><i class="fa-solid fa-building"></i> Companies</a></li>
+                        <li><a href="<%= ResolveUrl("~/Admin/JobsInternships.aspx") %>" class="sidebar-link"><i class="fa-solid fa-briefcase"></i> Jobs &amp; Internships</a></li>
+                        <li><a href="<%= ResolveUrl("~/Admin/Applications.aspx") %>" class="sidebar-link"><i class="fa-solid fa-file-signature"></i> Applications</a></li>
+                        <li><a href="<%= ResolveUrl("~/Admin/Analytics.aspx") %>" class="sidebar-link"><i class="fa-solid fa-chart-line"></i> Reports &amp; Analytics</a></li>
+                        <li><a href="<%= ResolveUrl("~/Admin/Profile.aspx") %>" class="sidebar-link"><i class="fa-regular fa-user"></i> Admin Profile</a></li>
+                        <li><a href="<%= ResolveUrl("~/Admin/Settings.aspx") %>" class="sidebar-link"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Sidebar Footer -->
+                <div class="sidebar-footer">
+                    <a href="<%= ResolveUrl("~/Admin/Settings.aspx") %>" class="sidebar-footer-link"><i class="fa-solid fa-shield-halved"></i> Security &amp; Logs</a>
+                    <a href="<%= ResolveUrl("~/Admin/Login.aspx") %>" class="sidebar-footer-link logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="admin-main-area">
+                
+                <!-- Topbar -->
+                <header class="admin-topbar">
+                    <!-- Search Input -->
+                    <div class="topbar-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search students, companies, records..." />
+                    </div>
+
+                    <!-- Actions & Admin Info -->
+                    <div class="topbar-actions">
+                        <a href="<%= ResolveUrl("~/Admin/Analytics.aspx") %>" class="topbar-icon-btn" title="System Alerts">
+                            <i class="fa-regular fa-bell"></i>
+                        </a>
+                        <a href="<%= ResolveUrl("~/Admin/Profile.aspx") %>" class="admin-user-badge">
+                            <div class="admin-avatar">AD</div>
+                            <span class="admin-name">Admin &middot; Raviraj</span>
+                        </a>
+                    </div>
+                </header>
+
+                <!-- Page Body Content PlaceHolder -->
+                <main class="admin-page-body">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </main>
+
+            </div>
+
+        </div>
+    </form>
+
+    <!-- Active sidebar link highlighter -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPath = window.location.pathname.toLowerCase();
+            const sidebarLinks = document.querySelectorAll(".sidebar-nav .sidebar-link");
+
+            sidebarLinks.forEach(link => {
+                const linkHref = link.getAttribute("href");
+                if (linkHref) {
+                    try {
+                        const linkPath = new URL(link.href, window.location.origin).pathname.toLowerCase();
+                        if (currentPath === linkPath) {
+                            link.classList.add("active");
+                        }
+                    } catch (e) {
+                        if (currentPath.includes(linkHref.toLowerCase())) {
+                            link.classList.add("active");
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
