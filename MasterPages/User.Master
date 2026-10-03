@@ -28,12 +28,12 @@
         <!-- Mobile Dim Overlay Backdrop -->
         <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
-        <!-- 25% / 75% Layout Grid Container -->
+        <!-- Desktop Grid Layout (260px Sidebar / 1fr Body) -->
         <div class="user-layout-grid">
             
-            <!-- Left Sidebar (25%) -->
+            <!-- Left Sidebar -->
             <aside class="user-sidebar" id="userSidebar">
-                <!-- Logo -->
+                <!-- Brand / Logo -->
                 <div class="sidebar-brand">
                     <a href="<%= ResolveUrl("~/User/Dashboard.aspx") %>" class="sidebar-logo-link">
                         <img src='<%= ResolveUrl("~/assets/images/logo.svg") %>' alt="SkillLinkX Logo" class="sidebar-logo-img" />

@@ -28,15 +28,15 @@
         <!-- Mobile Dim Overlay Backdrop -->
         <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
-        <!-- 25% / 75% Layout Grid Container -->
+        <!-- Desktop Grid Layout (260px Sidebar / 1fr Body) -->
         <div class="company-layout-grid">
             
-            <!-- Left Sidebar (25%) -->
+            <!-- Left Sidebar -->
             <aside class="company-sidebar" id="companySidebar">
-                <!-- Logo -->
+                <!-- Brand / Logo -->
                 <div class="sidebar-brand">
                     <a href="<%= ResolveUrl("~/Company/Dashboard.aspx") %>" class="sidebar-logo-link">
-                        <img src='<%= ResolveUrl("~/assets/Images/logo.svg") %>' alt="SkillLinkX Logo" class="sidebar-logo-img" />
+                        <img src='<%= ResolveUrl("~/assets/images/logo.svg") %>' alt="SkillLinkX Logo" class="sidebar-logo-img" />
                         <div class="sidebar-text-stack">
                             <span class="sidebar-logo-text">SkillLinkX</span>
                             <span class="sidebar-logo-sub">RECRUITER HUB</span>
