@@ -2,7 +2,7 @@
   <!-- Rounded Background Container -->
   <rect width="40" height="40" rx="9" fill="#0056D2" />
 
-  <!-- Graduation Cap Icon (100% matched to your Figma geometry) -->
+  <!-- Graduation Cap Icon -->
   <g fill="#DCE6FF">
     <!-- Diamond Mortarboard Top -->
     <path d="M18.27 13.43 C18.72 13.18 19.28 13.18 19.73 13.43 L26.37 17.15 C26.78 17.38 27.04 17.82 27.04 18.29 L27.04 18.57 C27.04 19.04 26.78 19.48 26.37 19.71 L19.73 23.43 C19.28 23.68 18.72 23.68 18.27 23.43 L10.63 19.16 C10.24 18.94 10 18.53 10 18.08 C10 17.63 10.24 17.22 10.63 17.00 Z" />

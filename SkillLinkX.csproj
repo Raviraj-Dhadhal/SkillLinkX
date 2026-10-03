@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -67,13 +67,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="assets\CSS\company-master.css" />
+    <Content Include="assets\CSS\company-pages.css" />
     <Content Include="assets\CSS\public-master.css" />
     <Content Include="assets\images\logo.svg" />
+    <Content Include="assets\JS\company.js" />
     <Content Include="assets\JS\public-master.js" />
+    <Content Include="Company\Analytics.aspx" />
+    <Content Include="Company\Applicants.aspx" />
+    <Content Include="Company\Candidates.aspx" />
+    <Content Include="Company\Dashboard.aspx" />
+    <Content Include="Company\Interviews.aspx" />
+    <Content Include="Company\ManageInternships.aspx" />
+    <Content Include="Company\ManageJobs.aspx" />
+    <Content Include="Company\Messages.aspx" />
+    <Content Include="Company\Notifications.aspx" />
+    <Content Include="Company\PostInternship.aspx" />
+    <Content Include="Company\PostJob.aspx" />
+    <Content Include="Company\Profile.aspx" />
+    <Content Include="Company\Settings.aspx" />
+    <Content Include="Company\SettingsBilling.aspx" />
+    <Content Include="Company\SettingsNotifications.aspx" />
+    <Content Include="Company\SettingsSecurity.aspx" />
+    <Content Include="Company\SettingsTeam.aspx" />
     <Content Include="Public\Home.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MasterPages\Company.Master.cs">
+      <DependentUpon>Company.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Company.Master.designer.cs">
+      <DependentUpon>Company.Master</DependentUpon>
+    </Compile>
     <Compile Include="MasterPages\Public.Master.cs">
       <DependentUpon>Public.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -92,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPages\Public.Master" />
+    <Content Include="MasterPages\Company.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
